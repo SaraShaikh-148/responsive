@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            font-family: emoji;
+            color:black;
+          
+        }
+        body{
+            height:10000px;
+        }
+        .header1{
+            background-color: white;
+            width:100%;
+            height:6vw;
+            display:flex;
+            border: 1px solid silver;
+            border-top:none;     
+        }
+        .text{
+            padding:15px;
+            align-self:center;
+            font-size:2vw;
+            }
+            .in{
+             align-self:center;
+             color: blanchedalmond;
+             height:2.5vw;
+             width:37vw;
+             border-radius:5px ;
+             border: 1px solid silver;
+             margin-left:300px;
+             background: url("https://img.icons8.com/material-outlined/24/C0C0C0/search--v1.png") no-repeat right;
+             background-size: 20px;
+             background-color: white;
+         }
+         .u{
+            display:flex;
+            flex-direction: row;
+            align-items:center;
+            list-style:none;
+            justify-content:center;
+            gap:15px;
+         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        margin-top:5px;
+        }
+
+
+        #slider {
+   margin: 0 auto;
+   width: 100%;
+   max-width: 100%;
+   text-align: center;
+   
+   
+}
+#slider input[type=radio] {
+   display: none;
+}
+#slider label {
+   cursor:pointer;
+   text-decoration: none;
+}
+#slides {
+   padding: 10px;
+   border: 1px solid #ccc;
+   border:none;
+    
+   
+   position: relative;
+   z-index: 1;
+}
+#overflow {
+   width: 100%;
+   overflow: hidden;
+}
+#slide1:checked ~ #slides .inner {
+   margin-left: 0;
+}
+#slide2:checked ~ #slides .inner {
+   margin-left: -100%;
+}
+#slide3:checked ~ #slides .inner {
+   margin-left: -200%;
+}
+#slide4:checked ~ #slides .inner {
+   margin-left: -300%;
+}
+#slides .inner {
+   transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+   width: 400%;
+   line-height: 0;
+   height: 400px;
+}
+#slides .slide {
+   width: 25%;
+   float:left;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+  
+}
+#slides .slide_1 {
+   background: #00171F;
+}
+#slides .slide_2 {
+   background: #003459;
+}
+#slides .slide_3 {
+   background: #007EA7;
+}
+#slides .slide_4 {
+   background: #00A8E8;
+}
+#controls {
+   margin: -180px 0 0 0;
+   width: 100%;
+   height: 50px;
+   z-index: 3;
+   position: relative;
+}
+#controls label {
+   transition: opacity 0.2s ease-out;
+   display: none;
+   width: 50px;
+   height: 50px;
+   opacity: .4;
+}
+#controls label:hover {
+   opacity: 1;
+}
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(1) {
+   background: url(https://image.flaticon.com/icons/svg/130/130884.svg) no-repeat;
+   float:right;
+   margin: 0 -50px 0 0;
+   display: block;
+}
+#slide1:checked ~ #controls label:nth-last-child(2),
+#slide2:checked ~ #controls label:nth-last-child(3),
+#slide3:checked ~ #controls label:nth-last-child(4),
+#slide4:checked ~ #controls label:nth-last-child(1) {
+   background: url(https://image.flaticon.com/icons/svg/130/130882.svg) no-repeat;
+   float:left;
+   margin: 0 0 0 -50px;
+   display: block;
+}
+#bullets {
+   margin: 120px 0 0;
+   text-align: center;
+}
+#bullets label {
+   display: inline-block;
+   width: 10px;
+   height: 10px;
+   border-radius:100%;
+   background: #ccc;
+   margin: 0 10px;
+}
+#slide1:checked ~ #bullets label:nth-child(1),
+#slide2:checked ~ #bullets label:nth-child(2),
+#slide3:checked ~ #bullets label:nth-child(3),
+#slide4:checked ~ #bullets label:nth-child(4) {
+   background: #444;
+}
+@media screen and (max-width: 900px) {
+   #slide1:checked ~ #controls label:nth-child(2),
+   #slide2:checked ~ #controls label:nth-child(3),
+   #slide3:checked ~ #controls label:nth-child(4),
+   #slide4:checked ~ #controls label:nth-child(1),
+   #slide1:checked ~ #controls label:nth-last-child(2),
+   #slide2:checked ~ #controls label:nth-last-child(3),
+   #slide3:checked ~ #controls label:nth-last-child(4),
+   #slide4:checked ~ #controls label:nth-last-child(1) {
+      margin: 0;
+   }
+   #slides {
+      max-width: calc(100% - 140px);
+      margin: 0 auto;
+   }
+   
+.header{
+    justify-content:center;
+}
+
+
+ 
+
+   
+}
+.second{
+    display:flex;
+    column-gap:15px;
+    padding:10px;
+    flex-wrap: wrap;
+
+}
+.heading{
+    text-align:center;
+    padding-top:20px ;
+    border-bottom: 1px solid silver;
+    font-family: Arial, Helvetica, sans-serif;
+
+    
+
+}
+.ui{
+    padding-left:170px;
+    display:flex;
+    column-gap:50vh;
+    list-style:none;
+    flex-wrap:wrap;
+    
+}
+.ul{
+    display:flex;
+    list-style:none;
+    padding-left:10px;
+    column-gap:170px;
+    flex-wrap: wrap;
+}
+.uli{
+    display:flex;
+    list-style:none;
+    padding-left:10px;
+    column-gap:230px;
+    flex-wrap: wrap;
+}
+.my{
+    display: flex;
+    align-items: end;
+}
+.header{
+        display:flex;
+        column-gap:12px;
+        flex-wrap: wrap;
+        row-gap:19px;
+    }
+    #one{
+        border:2px solid white;
+        height:530px;
+        width:400px;
+    }
+    #two{
+        border:2px solid white;
+        height:530px;
+        width:400px;
+    }
+    #three{
+        border:2px solid white;
+        height:530px;
+        width:400px;
+    }
+    #three1{
+        border:2px solid white;
+        height:440px;
+        width:400px;
+    }
+    p{
+        text-align: center;
+    }
+    i{
+        visibility: hidden;
+        align-self:center;
+        color:silver;
+       
+    }
+    @media screen and (max-width:882px){
+     .in{
+        margin-left:5%;
+     }
+     .u{
+        display:none;
+     }
+     i{
+        visibility: visible;
+        margin-left:25%;
+     }
+     div .slide-content img{
+        width:500px;
+        height:200px;
+       }
+       #slides .inner{
+          height:200px;
+       }
+    }
+     @media screen and (max-width:544px){
+        .in{
+            display:none
+        }
+       i{
+        padding-left:39%;
+       }
+       .heading{
+        font-size: medium;
+        font-weight: bold;
+       }
+       p{
+        font-size: small;
+        font-weight:bold;
+       
+       }
+       div .slide-content img{
+        width:500px;
+        height:200px;
+       }
+       #slides .inner{
+          height:200px;
+       }
+      .header div img{
+        width:70%;
+        padding-left:10%;
+      }
+      .header{
+        justify-content:center;
+      }
+      #three1{
+        height:300px; 
+      }
+      #three{
+        height:390px; 
+      }
+
+     
+    }
+    @media screen and (max-width:316px){
+    #slider{
+        display:none;
+    }
+    i{
+        padding-left:20%;
+    }
+    #three1{
+        height:230px; 
+      }
+      #three{
+        height:320px; 
+      }
+      .heading{
+        font-size: small;
+      }
+      .header1{
+        background-color: blueviolet;
+        height:45px;
+
+      }
+      .text{
+        color:white;
+        font-size: small;
+      }
+    }
+        
+    
+        
+    
+
+     
+
+          
+           
+    </style>
+</head>
+<body>
+    <div class="header1">
+        <h4 class="text">D E S I G N S</h4>
+       <input class="in" type="text" placeholder="    Find your Favourites"/>
+       <i class="fa fa-bars" style="font-size:20px"></i>
+    </div>
+       <ul class="u">
+        <li>NEW IN</li>
+        <li>MENS</li>
+        <li>WOMAN</li>
+        <li>KIDS</li>
+        <li>BEAUTY</li>
+        <li>ACCESORIES</li>
+        <li>HOME</li>
+        <li>THE EID</li>
+        <li>EID EDITS</li>
+       </ul>
+      
+
+
+
+       <div id="slider">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <div id="slides">
+           <div id="overflow">
+              <div class="inner">
+                 <div class="slide slide_1">
+                    <div class="slide-content">
+                      <img src="web-banners--menswear.webp"/>
+                    </div>
+                 </div>
+                 <div class="slide slide_2">
+                    <div class="slide-content">
+                       <img src="unstitched-web-banners.webp"/>
+                    </div>
+                 </div>
+                 <div class="slide slide_3">
+                    <div class="slide-content">
+                       <img src="web-banners-RTW.webp"/>
+                    </div>
+                 </div>
+                 <div class="slide slide_4">
+                    <div class="slide-content">
+                      <img src="web-banners-kids.webp"/>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div id="controls">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+        <div id="bullets">
+           <label for="slide1"></label>
+           <label for="slide2"></label>
+           <label for="slide3"></label>
+           <label for="slide4"></label>
+        </div>
+     </div> 
+    
+        <h2 class="heading">SHOP BY CATEGORY</h2>
+        <div class="header">
+            <div id="three1"><img src="kids-shop-by-category_09be2dd2-4f46-4fee-8cd6-46d5b367fc14.webp"/><p>KIDS</p></div>
+            <div id="three1"><img src="unstitched-shop-by-category-2.webp"/><p>STITCHED</p></div>
+            <div id="three1"><img src="RTW-shop-by-category_8c9b0765-28c5-437e-bd5f-dfe46b47a664.webp"/><p>UNSTICHED</p></div>
+        </div>
+          
+        <div class="header">
+            <div id="three1"><img src="sleepwear-hop-by-category_ce3f9b13-e1dd-4d97-b25e-e24eccecd8c3.webp"/><p>SLEEP WEAR</p></div>
+            <div id="three1"><img src="ME-2-shop-by-category_417b10e6-7044-4f3f-9186-70ceba02a519.webp"/><p>MODEST</p></div>
+            <div id="three1"><img src="Home-shop-by-category_5230fe59-3413-4b9d-84e8-e80d8940a496.webp"/><p>HOME</p></div>
+        </div>
+           <h2 class="heading">TRENDING</h2>
+           <div class="header">
+            <div id="three"><img src="0U3PEDY23V52_2.webp"/><p>SOLID JAUQUARD SHIRT</p></div>
+            <div id="three"><img src="00U2DDY23V52_2.webp"/><p>3 PIECE -EMBROIDERED SHIRT</p></div>
+            <div id="three"><img src="0U3PEDY23V52_2.webp"/><p>3 PIECE - EMBROIDERED CAMBRIC SUIT</p></div>
+        </div>
+        <div class="header">
+            <div id="three"><img src="0U2TEDY23V54_1_e4b12632-6191-4065-a83a-75c878d9f53e.webp"/><p>JAUQUARD EMBROIDERED SHIRT</p></div>
+            <div id="three"><img src="0S2SEST23V29_3.webp"/><p>2 PIECE-PRINTED CAMBRIC SUIT</p></div>
+            <div id="three"><img src="00ST1SL23V31_3.webp"/><p>3 PIECE - EMBROIDERED CAMBRIC SUIT</p></div>
+        </div>
+    
+      
+
+</body>
+</html>
